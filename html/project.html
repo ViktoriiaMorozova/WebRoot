@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/search_form.css">
+
+    <title>Viktoriia Morozova</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row round-border box-margin">
+            <div class="col-sm-12 no-padding round-border">
+                <div id="header" class="round-border">
+                    Rent a House: BNB-B project
+                </div>
+            </div>
+        </div>
+        <div class="row round-border box-margin">
+            <div class="col-sm-6 round-border" style="flex-direction: column">
+                <div id="main">
+                    <div class="background-image box-margin">
+                        <div style="height: 100px"></div>
+                        <div id="searchFormBody">
+                            <section id="searchFormContainer" class="transparent">
+                                <form class="form" id="searchForm">
+                                    <div id="locationDiv" class="searchTerm">
+                                        <i class="fas fa-search" id="locationSearch">
+                                            <input type="text" id="location" class="searchTermInput" required placeholder="enter location" />
+                                        </i>
+                                    </div>
+                                    <div id="checkin_checkout" class="searchTerm">
+                                        <input type="date" id="check-in" class="searchTermInput" required />
+                                        <input type="date" id="check-out" class="searchTermInput" required />
+                                    </div>
+                                    <div id="guests" class="searchTermKids">
+                                        <input type="number" id="numberOfAdults" class="searchTermInput" required
+                                            placeholder="number of adults" />
+                                        <input type="number" id="numberOfChildren" class="searchTermInput" required
+                                            placeholder="number of children" />
+                                        <input type="number" id="numberOfInfants" class="searchTermInput" required
+                                            placeholder="number of infants" />
+                                    </div>
+                                    <div id="submitButton" class="searchTerm">
+                                        <input type="submit" />
+                                    </div>
+                                </form>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 round-border">
+                <div id="text">
+                    <p>
+                        BNB:B is an alternative bed and breakfast app. It will allow customers to search any area in the United States for homes
+                    to rent and also allow them to submit a rental application form to the owner. Our app will have an innovative style
+                    which will make finding rental homes simpler than on other apps. We will use an API to pull data modeling homes for rent
+                    and then display that data to the customer based on their search criteria. The customer will then be able to view
+                    additional details about each search result. If they like the home, and want to rent it, then they click on the apply
+                    button to contact the owner to arrange a rental date. <br/><br />
+                    
+                        Our app is designed to be used anywhere in the world using a variety of currencies and complying with
+                    various national laws. This application would have features such as the ability to schedule a rental appointment far in advance,
+                    host your own properties and leave ratings for properties that you have stayed at in the past.<br /><br />
+                        For our project, I created a search form that retrieves search terms from GUI and sends them to a server.
+                    The system will then pull data from the API to display information that matches the user’s search
+                    criteria.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row round-border box-margin">
+            <div class="col-sm-12 no-padding round-border">
+                <div id="footer" class="round-border">
+                    <ul>
+                    <li><a href="../index.html" class="col-12 resources">Home</a></li>
+                    <li><a href="resources.html" class="col-12 resources"> Web Resources</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

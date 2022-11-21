@@ -1,149 +1,121 @@
-html {
-    box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap');
 
+body {
+    font-family: 'Moon Dance';
+}
 .container-fluid {
     margin: auto;
-    border: 1px solid rgb(174, 200, 184)
+    border: 1px solid #b0aac0;
+    border-radius: 10px;
+    background-color: #f0efef;
 }
 
-.col-sm-4 {
-    background-color: rgb(236, 249, 234);
-    padding-top: 10px;
-
+.no-padding {
+    padding: 0px 0px 0px 0px;
 }
 
-.col-sm-8 {
-    background-color: rgb(245, 244, 222);
-    padding-top: 10px;
-    
+.box-margin {
+    margin: 10px 5px 10px 5px;
 }
 
-.col-sm-4 p {
-    color: rgb(11, 27, 149);
+.text-padding {
+    padding-left: 10px;
 }
 
-.col-sm-8 p {
-    color: rgb(141, 65, 65);
-}
-
-#name {
-    color: rgb(108, 108, 144);
-    font-style: italic;
-    font-family: sans-serif;
-    font-size: x-large;
-}
-
-#ocupation {
-    color: navy;
-    font-family: sans-serif;
-
-}
-
-#photo {
-    height: 250px;
-    width: 240px;
-    margin-left: 10px;
-    margin-top: 20px;
-    box-sizing: border-box;
-}
-
-.resources {
-    color: rgb(11, 97, 27);
-    text-decoration: none;
-} 
-
-.resources:hover {
-    color: rgb(20, 51, 26);
-    text-decoration: none;
-}
-
-p {
-    font-family: sans-serif;
-} 
-
-.container {
-    margin: auto;
-    max-width: 1000px;
-    border-width: 2px;
-    border-radius:3px;
-    border-color: rgb(227, 215, 201);
-    flex-wrap: wrap;
-
-        
-}
-
-#h1 {
-    display: flex;
-    font-family: sans-serif;
-    padding: 5px;
-    background-color: rgb(231, 228, 228);
-    color: rgb(146, 79, 79);
-    font-size: 50px;
-    flex-direction: column;
-    justify-content: center;
-    flex-wrap: wrap;
-    
-    
-}
-
-#navbar {
-    display: flex;
-    font-family: sans-serif;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    flex-wrap: wrap;
-}
-
-a {
-    color: rgb(167, 99, 99);
-}
-
-#navbar a {
-    text-decoration: none;
-    background-color: rgb(240, 229, 229);
+#header {
     color: rgb(125, 90, 90);
-    font-size: 15px;
-    width: 20%
+    background-color: #b0aac0;
+    width: 100%;
+    height: 60px;
+    font-size: 30px;
+    font-weight: 500px;
 }
 
-ol {
-    color: rgb(107, 50, 50);
-}
-#navbar a:hover {
-    background-color: rgb(233, 219, 219);
-    color: rgb(208, 92, 92);
-    text-decoration: none;
-}
-
-#main {
-    display: flex;
-    font-family: sans-serif;
-    justify-content: center;
-    background-color: rgb(245, 244, 222);
-    flex-direction: column;
+#footer ul li {
+    list-style-type: none;
 }
 
 #footer {
-    display: flex;
-    font-family: sans-serif;
-    flex-direction: row;
-    justify-content: center;
+    background-color: #b0aac0;
     width: 100%;
-    flex-wrap: wrap;
+    height: 60px;
 }
 
 #footer a {
     text-decoration: none;
-    background-color: rgb(240, 229, 229);
+    background-color: #b0aac0;
     color: rgb(125, 90, 90);
-    font-size: 15px;
+    font-size: 20px;
     width: 100%;
+    
 }
 
 #footer a:hover {
-    background-color: rgb(233, 219, 219);
-    color: rgb(208, 92, 92);
+    background-color: #b0aac0;
+    color: rgb(123, 93, 98);
+    border-radius: 5px;
+
+}
+
+#navbar {
+    text-decoration: none;
+    font-size: 15px;
+}
+
+#navbar ul li {
+    list-style-type: none;
+}
+
+#navbar a {
+    text-decoration: none;
+    background-color: #ddeedd;
+    color: rgb(162, 106, 106);
+    font-size: 30px;
+    width: 20%
+}
+
+#navbar a:hover {
+    background-color: rgb(209, 237, 231);
+    color: rgb(204, 228, 222);
     text-decoration: none;
 }
+.round-border {
+    border-radius: 10px;
+}
+
+.background-image {
+    background-image: url('../img/high-rise.png');
+    height: 500px;
+    border-radius: 10px;
+    width: auto; 
+}
+
+.col-sm-4 {
+    background-color: #ddeedd;
+}
+
+.col-sm-8 {
+    background-color: #c2d4dd;
+}
+
+.col-sm-6 {
+    background-color: #c2d4dd;
+}
+
+.col-sm-9 {
+    background-color: #c2d4dd;
+
+}
+
+.col-sm-9 li a {
+    color: rgb(162, 106, 106);
+}
+
+.col-sm-3 {
+    background-color: #ddeedd;
+}
+
+p {
+    font-size: 20px;
+}
+
