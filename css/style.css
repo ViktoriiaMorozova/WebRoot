@@ -52,6 +52,7 @@ body {
 
 #footer a:hover {
     background-color: #b0aac0;
+    text-decoration: none;
     color: rgb(123, 93, 98);
     border-radius: 5px;
 
@@ -85,26 +86,12 @@ body {
 
 .background-image {
     background-image: url('../img/high-rise.png');
-    height: 500px;
+    height: 700px;
     border-radius: 10px;
     width: auto; 
-    /* filter: blur(8px); */
-    /* -webkit-filter: blur(8px); */
     
 }
 
-/* .col-sm-6 round-border1 {
-    background-color: #c2d4dd;
-}
-
-.col-sm-6 round-border1 {
-background-color: #ddeedd;
-}
-
-#main {
-    background-color: #ddeedd;
-    margin: 10px;
-} */
 .col-sm-4 {
     background-color: #ddeedd;
 }
@@ -139,3 +126,15 @@ ul {
     list-style-type: none
 }
 
+a {
+    text-decoration: none;
+    color: rgb(106, 120, 162);
+    font-size: 30px;
+    width: 20%
+}
+
+a:hover {
+    text-decoration: none;
+    color: rgb(123, 93, 98);
+    border-radius: 5px;
+}
