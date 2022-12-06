@@ -92,29 +92,20 @@ body {
     
 }
 
-.col-sm-4 {
+.col-sm-4:not('ignore-background') {
     background-color: #ddeedd;
 }
 
-.col-sm-8 {
-    background-color: #c2d4dd;
+.green-background {
+    background-color: #ddeedd;
 }
 
-.col-sm-6 {
+.blue-background {
     background-color: #c2d4dd;
-}
-
-.col-sm-9 {
-    background-color: #c2d4dd;
-
 }
 
 .col-sm-9 li a {
     color: rgb(162, 106, 106);
-}
-
-.col-sm-3 {
-    background-color: #ddeedd;
 }
 
 p {

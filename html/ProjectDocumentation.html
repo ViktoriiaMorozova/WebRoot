@@ -6,22 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/search_form.css">
+    <link rel="stylesheet" href="../css/projectDocumentation.css">
 
     <title>Viktoriia Morozova</title>
+
+    <script>
+        const addModalToImage = function(modalId, sourceImgId) {
+            const modalImgId = "modalImg" + modalId;
+            const captionId = "caption" + modalId;
+            const closeId = modalId + "-close";
+
+            const modal = document.getElementById(modalId);
+            modal.innerHTML = '<span class="modal-close" id="' + closeId
+                    + '">&times;</span><img class="modal-content" id="'
+                    + modalImgId + '"><div class="modal-caption" id="'
+                    + captionId +'"></div>';
+
+            const img = document.getElementById(sourceImgId);
+            const modalImg = document.getElementById(modalImgId);
+            const captionText = document.getElementById(captionId);
+            img.onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+            const span = document.getElementById(closeId);
+            span.onclick = function() { 
+                console.log("hi");
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -34,17 +62,79 @@
             </div>
         </div>
         <div class="row round-border box-margin">
-            <div class="col-sm-3 round-border" style="flex-direction: column">
+            <div class="col-sm-3 round-border green-background" style="flex-direction: column">
                 <ul>
-                    <li><a href="ProjectDocumentation.html"> Project Documentation</a></li>
+                    <li><a href="nextSteps.html">Next Steps</a></li>
                     <li><a href="UserManual.html"> User Instruction Manual</a></li>
                 </ul>
             </div>
-            <div class="col-sm-9 round-border">
+            <div class="col-sm-9 round-border blue-background">
                 <div id="text">
-                    
-                </div>
-                <div>
+                    <div class="row mt-4 mb-4">
+                        <div class="col-sm-4 ignore-background">
+                            <div class="card">
+                                <img src="../img/activity_diagram.png" class="card-img-top modal-source-img" alt="this is some text" id="image01">
+                                <div class="card-body d-flex align-items-end">
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                                <!-- The Modal -->
+                                <div id="modal01" class="modal"></div>
+                                <script>addModalToImage('modal01', 'image01');</script>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 ignore-background">
+                            <div class="card">
+                                <img src="../img/class_diagram.png" class="card-img-top" alt="..." id="image02">
+                                <div class="card-body d-flex align-items-end">
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                                <div id="modal02" class="modal"></div>
+                                <script>addModalToImage('modal02', 'image02');</script>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card">
+                                <img src="../img/entity.png" class="card-img-top" alt="..." id="image03">
+                                <div class="card-body d-flex align-items-end">
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                                <div id="modal03" class="modal"></div>
+                                <script>addModalToImage('modal03', 'image03');</script>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4 mb-4">
+                        <div class="col-sm-4">
+                            <div class="card">
+                                <img src="../img/sequence_diagram.png" class="card-img-top" alt="..." id="image04">
+                                <div class="card-body d-flex align-items-end">
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                                <div id="modal04" class="modal"></div>
+                                <script>addModalToImage('modal04', 'image04');</script>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card">
+                                <img src="../img/use_case.png" class="card-img-top" alt="..." id="image05">
+                                <div class="card-body d-flex align-items-end">
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                                <div id="modal05" class="modal"></div>
+                                <script>addModalToImage('modal05', 'image05');</script>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card">
+                                <img src="../img/girl.jpg" class="card-img-top" alt="..." id="image06">
+                                <div class="card-body d-flex align-items-end">
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                                <div id="modal06" class="modal"></div>
+                                <script>addModalToImage('modal06', 'image06');</script>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
