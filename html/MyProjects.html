@@ -19,13 +19,42 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/projectDocumentation.css">
+
+    <script>
+        const addModalToImage = function(modalId, sourceImgId) {
+            const modalImgId = "modalImg" + modalId;
+            const captionId = "caption" + modalId;
+            const closeId = modalId + "-close";
+
+            const modal = document.getElementById(modalId);
+            modal.innerHTML = '<span class="modal-close" id="' + closeId
+                    + '">&times;</span><img class="modal-content" id="'
+                    + modalImgId + '"><div class="modal-caption" id="'
+                    + captionId +'"></div>';
+
+            const img = document.getElementById(sourceImgId);
+            const modalImg = document.getElementById(modalImgId);
+            const captionText = document.getElementById(captionId);
+            img.onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+            const span = document.getElementById(closeId);
+            span.onclick = function() { 
+                console.log("hi");
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </head>
 
 <body>
     <div class="container-fluid">
         <div class="row round-border box-margin">
             <div class="col-sm-12 no-padding round-border">
-                <div id="header" class="round-border">Web Resources</div>
+                <div id="header" class="round-border">My Projects</div>
             </div>
         </div>
 
@@ -36,15 +65,27 @@
                         <li><a href="project.html">Rent a House</a></li>
                         <li><a href="">My Next Project</a></li>
                         <li><a href="">My Next Project</a></li>
-                        <li><a href="" >My Next Project</a></li>
-                        <li><a href="" >My Next Project</a></li>
+                        <li><a href="">My Next Project</a></li>
+                        <li><a href="">My Next Project</a></li>
                     </ul>
                 </div>
             </div>
 
             <div class="col-sm-9 round-border blue-background">
                 <div id="main">
-                    
+                    <div class="row justify-content-center">
+                    <div class="col-sm-4 ignore-background">
+                        <div class="card">
+                            <img src="../img/girl.png" class="modal-source-img" alt="I am preparing for a new project" id="image01">
+                            <div class="card-body d-flex align-items-end green-background">
+                                <p class="card-text">I am preparing for a new project.</p>
+                            </div>
+                            <!-- The Modal -->
+                            <div id="modal01" class="modal"></div>
+                            <script>addModalToImage('modal01', 'image01');</script>
+                        </div>
+                    </div>
+                </div>
                 </div>
             </div>
         </div>
